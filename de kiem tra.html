@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="mau.css"/>
+</head>
+<body>
+    <div class="header">
+        <img src="images/LogoTVU.png" alt="Logo Đại học Trà Vinh" class="logo"/>
+        <div>
+            <p>ĐẠI HỌC TRÀ VINH</p>
+            <p>Tận tâm – Minh bạch – Thân thiện – Sáng tạo</p>
+            <h1>CÂU LẠC BỘ SINH VIÊN CÔNG NGHỆ THÔNG TIN</h1>
+        </div>
+    </div>
+    <div id="menu">
+        <a href="#trangchu">Trang chủ</a>
+        <a href="#gioithieu">Giới thiệu</a>
+        <a href="#hoatdong">Hoạt động</a>
+        <a href="#lichsinhhoat">Lịch sinh hoạt</a>
+        <a href="#dangky">Đăng ký</a>
+    </div>
+    <div id="main">
+        <div id="box">
+            <a name="gioithieu"></a>
+            <h2>1. Giới thiệu</h2>
+            <div class="gioithieu">
+                <div>
+                    <p>
+                        Câu lạc bộ Công nghệ Thông tin là môi trường học tập, trao đổi và thực hành
+                        dành cho sinh viên yêu thích công nghệ. Câu lạc bộ giúp sinh viên củng cố
+                        kiến thức về HTML, CSS, lập trình web và các công cụ hỗ trợ thiết kế website.
+                    </p>
+                    <p>
+                        Thông qua các buổi sinh hoạt chuyên đề, bài tập nhóm và hoạt động học thuật,
+                        sinh viên có cơ hội rèn luyện kỹ năng tự học, làm việc nhóm, trình bày ý tưởng
+                        và xây dựng sản phẩm công nghệ có tính ứng dụng.
+                    </p>
+                </div>
+                <img src="images/Img.png" alt="Hình ảnh minh họa HTML, CSS">
+            </div>
+        </div>
+        <div id="box">
+            <a name="hoatdong"></a>
+            <h2>2. Hoạt động tiêu biểu</h2>
+            <div class="hoatdong">
+                <div>
+                    <ul>
+                        <li>Sinh hoạt chuyên đề về HTML, CSS và thiết kế giao diện web</li>
+                        <li>Thực hành xây dựng trang web cá nhân và trang giới thiệu sản phẩm</li>
+                        <li>Chia sẻ kinh nghiệm học lập trình, sử dụng công cụ soạn thảo mã nguồn</li>
+                        <li>Tổ chức hoạt động học thuật, báo cáo sản phẩm theo nhóm.</li>
+                        <li>Hỗ trợ sinh viên chuẩn bị bài tập, sản phẩm và báo cáo cuối học phần.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="box">
+            <a name="lichsinhhoat"></a>
+            <h2>3.Lịch sinh hoạt dự kiến</h2>
+            <div class="lichsinhhoat">
+                <div>
+                    <table border="1" align="center" width="1000">
+                        <tr bgcolor="#0d3f8a">
+                            <th><font color="white">STT</font></th>
+                            <th><font color="white">Nội dung sinh hoạt</font></th>
+                            <th><font color="white">Thời gian</font></th>
+                            <th><font color="white">Địa điểm</font></th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Giới thiệu HTML và cấu trúc trang web</td>
+                            <td>Thứ Hai, 18:00</td>
+                            <td>Phòng máy A</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Định dạng giao diện bằng CSS</td>
+                            <td>Thứ Tư, 18:00</td>
+                            <td>Phòng máy B</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Thiết kế menu, bảng và form</td>
+                            <td>Thứ Sáu, 18:00</td>
+                            <td>Phòng máy C</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Hoàn thiện sản phẩm web cá nhân</td>
+                            <td>Chủ nhật,08:00</td>
+                            <td>Phòng thực hành CNTT</td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+        <div id="box">
+            <a name="dangky"></a>
+            <h2>4.Form đăng ký tham gia</h2>
+            <div class="dangky">
+                <div>
+                    <form action="" name="dangky" method="post">
+                        
+                        <b>Họ và tên</b><input type="text" name="ht" size="20" class="dang"/>
+                        <b>Mã số sinh viên</b><input type="text" class="dang"/><br />
+                        <b>Email</b><input type="email" class="dang"/><br />
+                        <b>Lớp</b><input type="text" class="dang" />
+                    
+                       
+                        
+                            <legend><h4>Giới tính</h4></legend>
+                            <input type="radio" name="rdGTinh" value="0" />Nam &nbsp;&nbsp;
+                            <input type="radio" name="rdGTinh" value="1" />Nữ
+                        <h4>Lĩnh vực quan tâm</h4>
+                        <input type="checkbox" name="lv" value="web"/>Thiết kế web  <input type="checkbox" name="lv" value="laptrinh" /> Lập trình <input type="checkbox" name="lv" value="mmt" /> Mạng máy tính
+                        <br><br>
+                        <b>Thời gian có thể tham gia</b>
+                        <select name="thoigian" class="dang">
+                            <option value="select">-chọn thời gian-</option>
+                            <option value="7am">7:00-8:30</option>
+                            <option value="9am">9:00-10:30</option>
+                            <option value="1pm">1:00-2:30</option>
+                        </select>
+                      
+                       
+                        <h4>Lý do muốn tham gia</h4>
+                        <textarea class="reason"></textarea><br>
+                        <input type="submit" name="tao" value="Gửi đăng ký" class="no"/>
+                        <input type="reset" name="lai" value="Làm lại" class="no"/>
+                    </form>
+                </div>
+            </div>
+        </div> 
+    </div>
+   <div class="end">
+    <img src="Footer.png" alt="end">
+   </div>
+</body>
+</html>
