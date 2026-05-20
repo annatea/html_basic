@@ -21,6 +21,7 @@
         <a href="#hoatdong">Hoạt động</a>
         <a href="#lichsinhhoat">Lịch sinh hoạt</a>
         <a href="#dangky">Đăng ký</a>
+        <a href="#ngonngu">Ngôn ngữ (VN)</a>
     </div>
     <div id="main">
         <div id="box">
@@ -136,8 +137,20 @@
             </div>
         </div> 
     </div>
-   <div class="end">
-    <img src="Footer.png" alt="end">
+   <div class="final">
+    <img src="images/Footer.png" alt="chân dưới của tvu" class="footer"/>
    </div>
+   <div id="google_translate_element"></div>
+
+<script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'vi',
+      includedLanguages: 'en,zh-CN,ko,ja,fr',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+  }
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
