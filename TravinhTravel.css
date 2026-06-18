@@ -1,0 +1,436 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html{
+    font-size:16px;
+    scroll-behavior: smooth;
+    scroll-padding-top: 110px;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    line-height:1.6;
+    background:#fff;
+    color:#111;
+}
+
+header{
+    background:white;
+    padding:1rem 1.25rem;/*rem de it doi khi thay may*/
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+header h1{
+    font-size:clamp(1.5rem, 2.5vw, 2.2rem);
+}
+
+header p{
+    font-size:clamp(0.85rem, 1.2vw, 1rem);
+}
+/*phần dưới đang xem và header top khả nghi*/
+.header-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:0.5rem;
+    
+}
+.header-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.switch{
+    margin-left:auto;
+}
+.switch{
+    position:relative;
+    display:inline-block;
+    width:50px;
+    height:26px;
+}
+.slider::after{
+    content:"";
+    position:absolute;
+    right:6px;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:10px;
+    font-weight:bold;
+    color:white;
+}
+.slider::after{
+    content:"";
+    position:absolute;
+    width:1rem;
+    height:1rem;
+    background:url("https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/960px-Flag_of_Vietnam.svg.png") center/cover no-repeat;
+    right:5px;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+input:checked + .slider::after{
+    background-image:url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/1280px-Flag_of_the_United_Kingdom_%283-5%29.svg.png");
+}
+
+.switch input{
+    opacity:0;
+    width:0;
+    height:0;
+}
+
+.slider{
+    position:absolute;
+    cursor:pointer;
+    top:0; left:0; right:0; bottom:0;
+    background:#73c2ac;
+    border-radius:26px;
+    transition:0.3s;
+}
+
+.slider::before{
+    position:absolute;
+    content:"";
+    height:20px;
+    width:20px;
+    left:3px;
+    bottom:3px;
+    background:white;
+    border-radius:50%;
+    transition:0.3s;
+}
+
+input:checked + .slider{
+    background:#197360;
+}
+
+input:checked + .slider::before{
+    transform:translateX(24px);
+}
+/*ở trên xem thui*/
+.container{
+    display:flex;
+     align-items:flex-start;
+    width:100%;
+    max-width:1400px;
+    margin:0 auto;
+}
+
+/* MENU ĐỨNG YÊN */
+.left{
+    width:clamp(180px, 20vw,260px);
+    background:#e8f5e9;
+    
+    position:sticky;
+    top:96px;
+    height:calc(100vh - 96px);
+    flex-shrink:0;
+    overflow:auto;
+}
+#menu{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    padding:15px;
+}
+
+#menu a{
+    text-decoration:none;
+    color:#197360;
+    font-size:1rem;
+}
+
+
+/* NỘI DUNG */
+.right{
+    flex:1;
+    min-width: 0;
+    padding:1.25rem;
+    
+}
+
+.right section{
+    margin-bottom: 3rem;
+}
+.right h2{
+    font-size:clamp(1.3rem, 2vw, 1.8rem);
+    margin-bottom:1rem;
+}
+.anh1 {
+    border-radius: 12px;
+}
+.right p{
+     margin-bottom:1rem;
+    font-size:2rem;
+}
+
+.right h3{
+   font-size:clamp(1.05rem, 1.6vw, 1.3rem);
+    margin-bottom:0.75rem;
+}
+/*Noi dung hinh anh tu dong*/
+.autohinh1 {
+     width:100%;
+    max-width:none;
+    height:450px;
+    margin:1rem 0;
+    position:relative;
+    overflow:hidden;
+    border-radius:12px;
+}
+
+.hinh1 {
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0;
+    transition:opacity 1s ease-in-out;
+}
+
+.hinh1.active {
+    opacity: 1;
+}
+.autohinh2{
+     width:100%;
+    max-width:none;
+    height:450px;
+    margin:1rem 0;
+    position:relative;
+    overflow:hidden;
+    border-radius:12px;
+}
+.hinh2{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0;
+    transition:opacity 1s ease-in-out;
+}
+.hinh2.active{
+    opacity:1;
+}
+.autohinh3{
+     width:100%;
+    max-width:none;
+    height:450px;
+    margin:1rem 0;
+    position:relative;
+    overflow:hidden;
+    border-radius:12px;
+}
+.hinh3{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0;
+    transition:opacity 1s ease-in-out;
+}
+.hinh3.active{
+    opacity: 1;
+}
+.autohinh4{
+     width:100%;
+    max-width:none;
+    height:450px;
+    margin:1rem 0;
+    position:relative;
+    overflow:hidden;
+    border-radius:12px;
+}
+.hinh4{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0;
+    transition:opacity 1s ease-in-out;
+}
+.hinh4.active{
+    opacity: 1;
+}
+.autohinh5{
+     width:100%;
+    max-width:none;
+    height:450px;
+    margin:1rem 0;
+    position:relative;
+    overflow:hidden;
+    border-radius:12px;
+}
+.hinh5{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0;
+    transition:opacity 1s ease-in-out;
+}
+.hinh5.active{
+    opacity: 1;
+}
+.autohinh6{
+     width:100%;
+    max-width:none;
+    height:450px;
+    margin:1rem 0;
+    position:relative;
+    overflow:hidden;
+    border-radius:12px;
+}
+.hinh6{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0;
+    transition:opacity 1s ease-in-out;
+}
+.hinh6.active{
+    opacity: 1;
+}
+
+.autohinh7{
+     width:100%;
+    max-width:none;
+    height:450px;
+    margin:1rem 0;
+    position:relative;
+    overflow:hidden;
+    border-radius:12px;
+}
+.hinh7{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0;
+    transition:opacity 1s ease-in-out;
+}
+.hinh7.active{
+    opacity: 1;
+}
+
+.autohinh8{
+    width:100%;
+    max-width:none;
+    height:450px;
+    margin:1rem 0;
+    position:relative;
+    overflow:hidden;
+    border-radius:12px;
+}
+.hinh8{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0;
+    transition:opacity 1s ease-in-out;
+}
+.hinh8.active{
+    opacity: 1;
+}
+.autohinh9{
+    width:100%;
+    max-width:none;
+    height:450px;
+    margin:1rem 0;
+    position:relative;
+    overflow:hidden;
+    border-radius:12px;
+}
+.hinh9{
+   position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0;
+    transition:opacity 1s ease-in-out;
+}
+.hinh9.active{
+    opacity: 1;
+}
+/*mui ten tren hinh tu dong*/
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.4);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    z-index: 10;
+    font-size: 16px;
+}
+
+.prev { left: 5px; }
+.next { right: 5px; }
+
+.prev:hover, .next:hover {
+    background: rgba(0,0,0,0.7);
+}
+
+.diachi a{
+    text-decoration:none;
+    color:inherit;
+    padding:2px 6px;
+    border-radius:6px;
+    transition:0.25s;
+}
+
+.diachi a:hover{
+    background:#d1fae5;
+    color:#065f46;
+}
+/*cuoi trang*/
+footer{
+    background:#2c3e50;
+    padding:1rem;
+    text-align:center;
+    color:white;
+    clear:both;
+}
+
+@media (max-width: 900px){
+    .container{
+        flex-direction:column;
+    }
+
+    .left{
+        width:100%;
+        position:relative;
+        top:auto;
+        height:auto;
+    }
+
+    .right{
+        padding:1rem;
+    }
+
+    [class^="autohinh"]{
+        float:none;
+        width:100%;
+        margin:1rem 0;
+    }
+}
