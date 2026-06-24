@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thời tiết</title>
+    <link rel="stylesheet" href="weather.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" >
+    <link rel="icon" type="image/png" href="lotusko.png"><!--cho may tinh ,icon nay cho gobal tren web-->
+</head>
+<body>
+    <div id="muc"><!--thanh mục trên-->
+        <a href="DulichTraVinh.html">Home</a>
+        <a href="">Thời tiết</a>
+        <a href="group.html">Developers</a>
+        <a href="contact.html">Liên hệ</a>
+    </div>
+    <div class="bocphot"><!--wrapper(bọc)-->
+        <div class="container"><!--nội dung-->
+        <div class="search-box"><!--tìm kiếm-->
+            <i class="bx bxs-map"></i>
+            <input type="text" placeholder="Nhập vào địa điểm">
+            <button class="bx bxs-search"></button><!--nút tìm kiếm-->
+        </div>
+
+        <div class="weather-box"><!--hộp thời tiết-->
+            <div class="box">
+                <div class="info-weather"><!--thông tin thời tiết-->
+                    <div class="weather">
+                        <img src="sunny.gif
+                        ">
+                        <p class="nhietdo">0<span>°C</span></p>
+                        <p class="mota">Mây</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="weather-details"><!--đổ ẩm-->
+            <div class="doam">
+                <i class="bx bx-water"></i>
+                <div class="text">
+                    <div class="info-doam">
+                        <span>0%</span>
+                    </div>
+                    <p>Độ ẩm</p>
+                </div>
+            </div>
+            <div class="gio"><!--gió-->
+                <i class="bx bx-wind"></i>
+                <div class="text">
+                    <div class="info-gio">
+                        <span>0 Km/h</span>
+                    </div>
+                    <p>Tốc độ gió</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ <footer>
+        <p>©2026 Du lịch Trà Vinh</p>
+    </footer>
+    <script src="weather.js"></script>
+</body>
+</html>

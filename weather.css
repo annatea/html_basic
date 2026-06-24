@@ -1,0 +1,197 @@
+/* Thiết lập mặc định cho toàn bộ trang:
+   loại bỏ khoảng cách mặc định và áp dụng font chữ chung */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+/* Thiết lập phần thân trang:
+   sử dụng ảnh động làm nền và hiển thị toàn màn hình */
+body{
+    min-height: 100vh;
+    background: url(flyinglantern.gif);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+/* Thiết lập khung bao bên ngoài:
+   căn giữa nội dung theo chiều ngang và chiều dọc */
+.bocphot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 50px);
+}
+/* Thiết lập thanh menu điều hướng phía trên:
+   cố định vị trí khi cuộn trang */
+#muc {
+    background: #197360;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+/* Định dạng các liên kết trong thanh menu */
+#muc a{
+    color: #d1fae5;
+    display:inline-block;
+    padding: 12px 22px;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* Tạo hiệu ứng khi đưa chuột vào các mục trong menu */
+#muc a:hover{
+    background: #73c2ac;
+    color: #065f46;
+}
+/* Thiết lập khung chính hiển thị thông tin thời tiết:
+   tạo hiệu ứng kính mờ bằng backdrop-filter */
+.container{
+    position: relative;
+    width: 400px;
+    height: 555px;
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(30px);
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 16px;
+    padding: 20px;
+    color: #fff;
+}
+/* Thiết lập khu vực tìm kiếm thành phố */
+.search-box{
+    position: relative;
+    width: 100%;
+    height: 55px;
+    background: rgb(49, 191, 104);
+    display: flex;
+    align-items: center;
+    border-radius: 14px;
+}
+/* Định dạng biểu tượng tìm kiếm */
+.search-box i{
+    position: absolute;
+    left: 10px;
+    font-size: 28px;
+}
+/* Định dạng ô nhập tên thành phố */
+.search-box input{
+    position: absolute;
+    width: calc(100% - 80px);
+    height: 100%;
+    left:42px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border: 2px solid transparent;
+    outline: none;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 0 48px 0 42px;
+    
+}
+/* Định dạng chữ gợi ý bên trong ô nhập liệu */
+.search-box input::placeholder{
+    color: #fff;
+    text-transform: capitalize;
+}
+/* Định dạng nút thực hiện tìm kiếm */
+.search-box button{
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 28px;
+    color: #fff;
+    padding: 0 40px 0 5px;
+    cursor: pointer;
+}
+/* Thiết lập khu vực hiển thị thông tin thời tiết */
+.weather-box{
+    text-align: center;
+    margin: 40px 0;
+}
+/* Định dạng hình ảnh minh họa thời tiết */
+.weather-box img{
+    width: 60%;
+    border-radius: 14px;
+}
+/* Hiển thị nhiệt độ hiện tại của địa điểm được tìm kiếm */
+.weather-box .nhietdo{
+    position: relative;
+    font-size: 64px;
+    line-height: 1;
+    font-weight: 700;
+    margin: 20px 0 6px -30px;
+}
+/* Định dạng ký hiệu đơn vị nhiệt độ (°C) */
+.weather-box .nhietdo span{
+    position: absolute;
+    font-size: 24px;
+    margin-left: 4px;
+}
+/* Hiển thị mô tả trạng thái thời tiết
+   như nắng, mây hoặc mưa */
+.weather-box .mota{
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+/* Thiết lập khu vực hiển thị thông tin chi tiết
+   về độ ẩm và tốc độ gió */
+.weather-details{
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
+    padding: 0 20px;
+    display: flex ;
+}
+/* Thiết lập bố cục chung cho khối độ ẩm và tốc độ gió */
+.weather-details .doam,
+.weather-details .gio{
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+/* Căn chỉnh vị trí hiển thị thông tin độ ẩm */
+.weather-details .doam{
+    padding-left: 20px;
+    justify-content: flex-start;
+}
+/* Căn chỉnh vị trí hiển thị thông tin tốc độ gió */
+.weather-details .gio{
+    padding-right: 20px;
+    justify-content: flex-end;
+}
+/* Định dạng biểu tượng độ ẩm và tốc độ gió */
+.weather-details i{
+    font-size: 56px;
+    margin-right: 10px;
+}
+/* Định dạng giá trị số liệu hiển thị */
+.weather-details span{
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 500;
+}
+/* Định dạng tiêu đề của từng thông tin */
+.weather-details p{
+    font-size: 14px;
+    font-weight: 500;
+}
+/* Thiết lập giao diện hiển thị của phần footer */
+footer{
+    background:#2c3e50;
+    padding:1rem;
+    text-align:center;
+    color:white;
+    clear:both;
+}

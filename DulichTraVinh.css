@@ -1,20 +1,29 @@
+/* Thiết lập mặc định cho toàn bộ trang:
+   loại bỏ khoảng cách mặc định và tính kích thước phần tử bao gồm cả border */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
+/* Thiết lập kích thước chữ mặc định của trang,
+   đồng thời tạo hiệu ứng cuộn mượt khi nhấn vào các liên kết */
+
 html{
     font-size:16px;
     scroll-behavior: smooth;
     scroll-padding-top: 110px;
 }
-
+/* Thiết lập kiểu chữ, khoảng cách dòng,
+   màu nền và màu chữ cho toàn bộ nội dung trang web */
 body{
     font-family: Arial, sans-serif;
     line-height:1.6;
     background:#fff;
     color:#111;
 }
+/* Thiết lập phần đầu trang (header),
+   cố định vị trí khi cuộn trang và tạo bóng đổ để tăng tính thẩm mỹ */
 
 header{
     background:white;
@@ -30,81 +39,43 @@ header{
     box-shadow:0 4px 10px rgba(0,0,0,0.15);
     color:#065f46;
 }
+/* Thiết lập thanh menu điều hướng ngang ở phía trên website */
+#muc{
+    background: #197360;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+}
+/* Định dạng các liên kết trong thanh menu */
+#muc a{
+    color: #d1fae5;
+    display: inline-block;
+    padding: 12px 22px;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* Tạo hiệu ứng khi di chuyển chuột vào các mục trong menu */
+#muc a:hover{
+    background: #73c2ac;
+    color: #065f46;
+}
+/* Thiết lập kích thước và khoảng cách của logo */
 .logo {
-            width: 110px;
+            width: 70px;
             margin-right: 20px;
         }
+/* Định dạng tiêu đề chính của website */  
 header h1{
     font-size:clamp(1.5rem, 2.5vw, 2.2rem);
     color:#065f46;
 }
-
+/* Định dạng phần mô tả hoặc tiêu đề phụ của website */
 header p{
     font-size:clamp(0.85rem, 1.2vw, 1rem);
     line-height: 1.4;
 }
-/*phần dưới đang xem và header top khả nghi*/
-.header-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:0.5rem;
-    
-}
-.header-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap: wrap;
-    gap:0.5rem;
-    flex:1;
-}
-.switch{
-    position:relative;
-    display:inline-block;
-    width:50px;
-    height:26px;
-}
-.slider::before{
-    content:"";
-    position:absolute;
-    height:20px;
-    width:20px;
-    background-size:cover;
-    left:3px;
-    bottom:3px;
-    background:url("https://flagcdn.com/w40/vn.png") center/cover no-repeat;
-    border-radius:50%;
-    transition:0.3s;
-}
-
-input:checked + .slider::before{
-    transform:translateX(24px);
-    background:url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/1280px-Flag_of_the_United_Kingdom_%283-5%29.svg.png") center/cover no-repeat;
-}
-.switch input{
-    opacity:0;
-    width:0;
-    height:0;
-}
-
-.slider{
-    position:absolute;
-    cursor:pointer;
-    top:0; left:0; right:0; bottom:0;
-    background:#73c2ac;
-    border-radius:26px;
-    transition:0.3s;
-}
-input:checked + .slider{
-    background:#197360;
-}
-
-input:checked + .slider::before{
-    transform:translateX(24px);
-}
-/*ở trên xem thui*/
+/* Chia bố cục trang thành hai phần:
+   menu bên trái và nội dung chính bên phải */
 .container{
     display:flex;
      align-items:flex-start;
@@ -112,32 +83,33 @@ input:checked + .slider::before{
     max-width:1400px;
     margin:0 auto;
 }
-
+/* Thiết lập thanh menu bên trái và giữ cố định khi cuộn trang */
 /* MENU ĐỨNG YÊN */
 .left{
     width:clamp(180px, 20vw,260px);
     background:#e8f5e9;
-    
     position:sticky;
     top:96px;
     height:calc(100vh - 96px);
     flex-shrink:0;
     overflow:auto;
 }
+/* Sắp xếp các mục trong menu theo chiều dọc và tạo khoảng cách giữa chúng */
+
 #menu{
     display:flex;
     flex-direction:column;
     gap:10px;
     padding:15px;
 }
-
+/* Định dạng các liên kết trong menu bên trái */
 #menu a{
     text-decoration:none;
     color:#197360;
     font-size:1rem;
 }
 
-
+/* Thiết lập khu vực hiển thị nội dung chính của website */
 /* NỘI DUNG */
 .right{
     flex:1;
@@ -145,221 +117,55 @@ input:checked + .slider::before{
     padding:1.25rem;
     
 }
-
+/* Tạo khoảng cách giữa các phần nội dung */
 .right section{
     margin-bottom: 3rem;
 }
+/* Định dạng tiêu đề cấp 2 trong phần nội dung */
 .right h2{
     font-size:clamp(1.3rem, 2vw, 1.8rem);
     margin-bottom:1rem;
 }
+/* Bo tròn các góc của hình ảnh */
 .anh1 {
     border-radius: 12px;
 }
+/* Định dạng các đoạn văn trong phần nội dung */
 .right p{
      margin-bottom:1rem;
     font-size:1rem;
 }
-
+/* Định dạng tiêu đề cấp 3 trong phần nội dung */
 .right h3{
    font-size:clamp(1.05rem, 1.6vw, 1.3rem);
     margin-bottom:0.75rem;
 }
-/*Noi dung hinh anh tu dong*/
-.autohinh1 {
-     width:100%;
-    max-width:none;
-    height:450px;
-    margin:1rem 0;
-    position:relative;
-    overflow:hidden;
-    border-radius:12px;
+/* Thiết lập khung chứa hình ảnh, xác định kích thước,
+vị trí và bo tròn các góc của khung ảnh */
+[class^="autohinh"] {
+    width: 100%;
+    height: 450px;
+    margin: 1rem 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
 }
-
-.hinh1 {
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    opacity:0;
-    transition:opacity 1s ease-in-out;
+/* Thiết lập các hình ảnh bên trong khung ảnh,
+ban đầu ảnh sẽ được ẩn và tạo hiệu ứng chuyển đổi */
+[class^="hinh"] {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
-
-.hinh1.active {
+/* Hiển thị hình ảnh đang được chọn */
+[class^="hinh"].active {
     opacity: 1;
 }
-.autohinh2{
-     width:100%;
-    max-width:none;
-    height:450px;
-    margin:1rem 0;
-    position:relative;
-    overflow:hidden;
-    border-radius:12px;
-}
-.hinh2{
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    opacity:0;
-    transition:opacity 1s ease-in-out;
-}
-.hinh2.active{
-    opacity:1;
-}
-.autohinh3{
-     width:100%;
-    max-width:none;
-    height:450px;
-    margin:1rem 0;
-    position:relative;
-    overflow:hidden;
-    border-radius:12px;
-}
-.hinh3{
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    opacity:0;
-    transition:opacity 1s ease-in-out;
-}
-.hinh3.active{
-    opacity: 1;
-}
-.autohinh4{
-     width:100%;
-    max-width:none;
-    height:450px;
-    margin:1rem 0;
-    position:relative;
-    overflow:hidden;
-    border-radius:12px;
-}
-.hinh4{
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    opacity:0;
-    transition:opacity 1s ease-in-out;
-}
-.hinh4.active{
-    opacity: 1;
-}
-.autohinh5{
-     width:100%;
-    max-width:none;
-    height:450px;
-    margin:1rem 0;
-    position:relative;
-    overflow:hidden;
-    border-radius:12px;
-}
-.hinh5{
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    opacity:0;
-    transition:opacity 1s ease-in-out;
-}
-.hinh5.active{
-    opacity: 1;
-}
-.autohinh6{
-     width:100%;
-    max-width:none;
-    height:450px;
-    margin:1rem 0;
-    position:relative;
-    overflow:hidden;
-    border-radius:12px;
-}
-.hinh6{
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    opacity:0;
-    transition:opacity 1s ease-in-out;
-}
-.hinh6.active{
-    opacity: 1;
-}
-
-.autohinh7{
-     width:100%;
-    max-width:none;
-    height:450px;
-    margin:1rem 0;
-    position:relative;
-    overflow:hidden;
-    border-radius:12px;
-}
-.hinh7{
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    opacity:0;
-    transition:opacity 1s ease-in-out;
-}
-.hinh7.active{
-    opacity: 1;
-}
-
-.autohinh8{
-    width:100%;
-    max-width:none;
-    height:450px;
-    margin:1rem 0;
-    position:relative;
-    overflow:hidden;
-    border-radius:12px;
-}
-.hinh8{
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    opacity:0;
-    transition:opacity 1s ease-in-out;
-}
-.hinh8.active{
-    opacity: 1;
-}
-.autohinh9{
-    width:100%;
-    max-width:none;
-    height:450px;
-    margin:1rem 0;
-    position:relative;
-    overflow:hidden;
-    border-radius:12px;
-}
-.hinh9{
-   position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    opacity:0;
-    transition:opacity 1s ease-in-out;
-}
-.hinh9.active{
-    opacity: 1;
-}
-/*mui ten tren hinh tu dong*/
+/* Thiết lập nút chuyển hình ảnh sang trái và sang phải */
 .prev, .next {
     position: absolute;
     top: 50%;
@@ -373,14 +179,15 @@ input:checked + .slider::before{
     z-index: 10;
     font-size: 16px;
 }
-
+/* Thiết lập vị trí của nút chuyển về ảnh trước */
 .prev { left: 5px; }
+/* Thiết lập vị trí của nút chuyển sang ảnh tiếp theo */
 .next { right: 5px; }
-
+/* Tạo hiệu ứng khi đưa chuột vào nút chuyển ảnh */
 .prev:hover, .next:hover {
     background: rgba(0,0,0,0.7);
 }
-
+/* Định dạng các liên kết địa chỉ và Google Maps */
 .diachi a{
     text-decoration:none;
     color:inherit;
@@ -388,12 +195,12 @@ input:checked + .slider::before{
     border-radius:6px;
     transition:0.25s;
 }
-
+/* Tạo hiệu ứng khi đưa chuột vào liên kết địa chỉ */
 .diachi a:hover{
     background:#d1fae5;
     color:#065f46;
 }
-/*cuoi trang*/
+/* Thiết lập giao diện hiển thị của phần footer */
 footer{
     background:#2c3e50;
     padding:1rem;
@@ -401,23 +208,24 @@ footer{
     color:white;
     clear:both;
 }
-
+/* Điều chỉnh giao diện phù hợp với các thiết bị có màn hình nhỏ */
 @media (max-width: 900px){
+    /* Chuyển bố cục sang dạng một cột trên thiết bị di động */
     .container{
         flex-direction:column;
     }
-
+/* Mở rộng menu bên trái chiếm toàn bộ chiều ngang màn hình */
     .left{
         width:100%;
         position:relative;
         top:auto;
         height:auto;
     }
-
+/* Điều chỉnh khoảng cách của phần nội dung chính */
     .right{
         padding:1rem;
     }
-
+/* Điều chỉnh kích thước khung trình chiếu ảnh phù hợp với màn hình nhỏ */
     [class^="autohinh"]{
         float:none;
         width:100%;
