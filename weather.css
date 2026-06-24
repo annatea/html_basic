@@ -10,7 +10,7 @@
    sử dụng ảnh động làm nền và hiển thị toàn màn hình */
 body{
     min-height: 100vh;
-    background: url(flyinglantern.gif);
+    background: url(../img/flyinglantern.gif);
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;

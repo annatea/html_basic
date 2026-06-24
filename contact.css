@@ -1,8 +1,17 @@
-body{
-    background-image: url(flyinglantern.gif);
+
+*{
+    box-sizing: border-box;/* padding không cộng thêm vào width*/
+}
+    body{
+    background-image: url(../img/flyinglantern.gif);
     background-repeat: no-repeat;
     background-size: cover;
-    
+    background-position: center; /* background cố định theo viewport, không bị lặp dù trang dài bao nhiêu */
+    min-height: 100vh;            /* đảm bảo body luôn chiếm ít nhất toàn màn hình */
+    margin: 0;                    /* xóa margin mặc định của body tránh khoảng trắng thừa */
+    display: flex;
+    flex-direction: column;/*biến body thành cột dọc*/
+    justify-content: space-between;
 }
 #muc {
     background: #197360;
@@ -38,8 +47,10 @@ body{
 }
 .container{
     position: relative;
-    width: 1000px;
-    height: 550px;
+    width: 90%;/*co lại theo màn hình nhỏ*/
+    max-width: 1000px;
+    height: auto;
+    min-height: 550px;   /* không ép chiều cao cố định khiến nội dung tràn */
     background: rgba(255, 255, 255, .1);
     backdrop-filter: blur(30px);
     border: 2px solid rgba(255, 255, 255, .2);
@@ -47,6 +58,7 @@ body{
     padding: 20px;
     color: #fff;
     margin: 30px auto; /* căn giữa ngang */
+    box-sizing: border-box; /* padding không làm tràn */
 }
 footer{
     background:#2c3e50;
@@ -54,4 +66,5 @@ footer{
     text-align:center;
     color:white;
     clear:both;
+    margin-top: auto;/*trên footer,đẩy footer xuống tận cùng dù nội dung ngắn*/
 }

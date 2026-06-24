@@ -4,11 +4,15 @@
 }
 body{
     font-family: "roboto";
-    background: url(flyinglantern.gif);
+    background: url(../img/flyinglantern.gif);
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 0;
-    height: 100vh;
+    background-position: center; /* background cố định theo viewport, không bị lặp dù trang dài bao nhiêu */
+    min-height: 100vh;            /* đảm bảo body luôn chiếm ít nhất toàn màn hình */
+    margin: 0;                    /* xóa margin mặc định của body tránh khoảng trắng thừa */
+    display: flex;
+    flex-direction: column;/*biến body thành cột dọc*/
+    justify-content: space-between;
 }
 #muc {
     background: #197360;
@@ -43,8 +47,8 @@ body{
 }
 .the{
     
-    width: 260px;
-    height: 430px;
+    width: 210px;
+    height: 370px;
     transform-style: preserve-3d;
     transition: transform .8s ease-in-out;
     cursor: pointer;
@@ -125,15 +129,17 @@ body{
     margin-bottom: 15px;
 }
 .card-mota{
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #fffdfd;
     margin-bottom: 20px;
     line-height: 1.6;
 }
 .container{
     position: relative;
-    width: 1150px;
-    height: 580px;
+    width: 90%;/*co lại theo màn hình nhỏ*/
+    max-width: 1000px;
+    height: auto;
+    min-height: 550px;   /* không ép chiều cao cố định khiến nội dung tràn */
     background: rgba(255, 255, 255, .1);
     backdrop-filter: blur(30px);
     border: 2px solid rgba(255, 255, 255, .2);
@@ -141,6 +147,8 @@ body{
     padding: 20px;
     color: #fff;
     margin: 30px auto; /* căn giữa ngang */
+    flex-wrap: wrap; /* xuống dòng nếu không đủ chỗ */
+    box-sizing: border-box; /* padding không làm tràn */
 }
 .nhom12{
     font-size: 2rem;
@@ -152,4 +160,5 @@ footer{
     text-align:center;
     color:white;
     clear:both;
+     margin-top: auto;/*trên footer,đẩy footer xuống tận cùng dù nội dung ngắn*/
 }
